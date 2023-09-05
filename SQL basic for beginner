@@ -1,0 +1,55 @@
+#  To show database in mysql
+
+Show databases;
++--------------------+
+| Database           |
++--------------------+
+| dbtesting_01       |
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+
+#  Creating new database for performing SQL operations
+
+Create database dBtesting_001;
+
+#  To use database which we create 
+
+use dBtesting_01;
+
+#  Create table field/column heading without data contraints
+
+CREATE TABLE if not exists SignUp (
+ID int,
+FN varchar(255),
+LN varchar(255),
+Mob_No int,
+Email_Id varchar(255),
+City varchar(255)
+);
+
+# insert data into table by first approach
+
+INSERT INTO SignUp Values
+(1,'Rahul', 'Gandhi', 1111, '1@gmail.com','Pune'),
+(2,'Arvind','Kejriwal', 2222,'2@gmail.com','Mumbai'),
+(3,'Anna','Hajare',3333,'3@gmail.com','Pune'),
+(4,'Sharad','Pawar',4444, '4@gmail.com','Baramati'),
+(5,'Soniya','Gandhi',5555,'5@gmail.com','Pune'),
+(6,'Jayant', 'Patil',6666,'6@gmail.com','Sangli');
+
+# To show output or retrieve output we will use select query commond
+
+select * from signup;
+
+# to show all table present in current database which used
+
+show tables;
+
+# to show table filed with contraints 
+
+description signup;
+
+
+###  if not exists use in table and database so that error not come in output if already same name table and database exist
